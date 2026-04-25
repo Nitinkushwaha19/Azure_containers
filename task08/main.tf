@@ -15,7 +15,7 @@ module "ACR" {
   container_registry_sku  = var.container_registry_sku
 
   # container registry task variables
-  repo_url   = var.repo_url
+  repo_url   = "${var.repo_url}#main:task08/application"
   git_pat    = var.git_pat
   image_name = local.image_name
 
