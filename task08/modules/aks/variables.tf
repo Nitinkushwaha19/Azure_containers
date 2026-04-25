@@ -36,11 +36,6 @@ variable "default_node_pool_vm_size" {
   description = "Default node pool VM size"
 }
 
-variable "default_node_pool_os_disk_type" {
-  type        = string
-  default     = "Ephemeral"
-  description = "Default node pool OS disk type"
-}
 
 variable "tenant_id" {
   type        = string
