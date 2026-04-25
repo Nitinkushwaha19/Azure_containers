@@ -29,7 +29,7 @@ module "keyvault" {
 
   rg_name        = azurerm_resource_group.RG.name
   rg_location    = azurerm_resource_group.RG.location
-  key_vault_name = local.key_vault_name
+  key_vault_name = local.keyvault_name
   key_vault_sku  = var.key_vault_sku
 
   tags = var.tags

@@ -14,7 +14,6 @@ variable "rg_location" {
 variable "container_registry_sku" {
   description = "The SKU of the Azure Container Registry. Possible values are 'Basic', 'Standard', and 'Premium'."
   type        = string
-  default     = "Standard"
 }
 
 # Variables for ACR Task
@@ -62,7 +61,6 @@ variable "redis_cache_sku_name" {
 variable "container_group_sku" {
   description = "The SKU of the container group. Possible values are 'Standard' and 'Premium'."
   type        = string
-  default     = "Standard"
 }
 
 
@@ -70,5 +68,4 @@ variable "container_group_sku" {
 variable "tags" {
   description = "A map of tags to assign to the resources. Tags are key-value pairs that help to organize and categorize resources in Azure."
   type        = map(string)
-  default     = {}
 }

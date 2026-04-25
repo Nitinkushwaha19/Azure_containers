@@ -1,12 +1,12 @@
 locals {
 
-  rg_name        = "${var.name_prefix}-rg"
-  aci_name       = "${var.name_prefix}-ci"
-  acr_name       = "cmtr2ehw6cykmod8cr"
-  aks_name       = "${var.name_prefix}-aks"
-  key_vault_name = "${var.name_prefix}-kv"
-  redis_name     = "${var.name_prefix}-redis"
-  image_name     = "${var.name_prefix}-app"
+  rg_name       = "${var.name_prefix}-rg"
+  aci_name      = "${var.name_prefix}-ci"
+  acr_name      = "cmtr2ehw6cykmod8cr"
+  aks_name      = "${var.name_prefix}-aks"
+  keyvault_name = "${var.name_prefix}-kv"
+  redis_name    = "${var.name_prefix}-redis"
+  image_name    = "${var.name_prefix}-app"
 
   # ACI Module locals
   container_group_name     = "${var.name_prefix}-cg"

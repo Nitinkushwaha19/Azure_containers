@@ -28,8 +28,14 @@ variable "image_name" {
 
 
 # Resource Group variables
-variable "rg_name" {}
-variable "rg_location" {}
+variable "rg_name" {
+  description = "The name of the resource group in which to create the resources."
+  type        = string
+}
+variable "rg_location" {
+  description = "The Azure region where the resource group will be created."
+  type        = string
+}
 
 # Tags variable
 variable "tags" {

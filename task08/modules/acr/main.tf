@@ -25,3 +25,7 @@ resource "azurerm_container_registry_task" "ACR-task" {
     image_names          = ["${var.image_name}:latest"]
   }
 }
+
+resource "azurerm_container_registry_task_schedule_run_now" "run" {
+  container_registry_task_id = azurerm_container_registry_task.ACR-task.id
+}
