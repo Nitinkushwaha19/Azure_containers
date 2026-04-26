@@ -138,7 +138,7 @@ resource "kubectl_manifest" "service" {
 
 data "kubernetes_service" "app" {
   metadata {
-    name      = "app-service"
+    name      = "redis-flask-app-service"
     namespace = "default"
   }
 
