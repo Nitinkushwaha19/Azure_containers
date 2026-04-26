@@ -11,13 +11,13 @@ resource "azurerm_redis_cache" "redis" {
 
 
 resource "azurerm_key_vault_secret" "redis_host" {
-  name         = "${var.key_vault_secret}-redis-host"
+  name         = "${var.key_vault_secret}-hostname"
   value        = azurerm_redis_cache.redis.hostname
   key_vault_id = var.key_vault_id
 }
 
 resource "azurerm_key_vault_secret" "redis_pwd" {
-  name         = "${var.key_vault_secret}-redis-pwd"
+  name         = "${var.key_vault_secret}-primary-key"
   value        = azurerm_redis_cache.redis.primary_access_key
   key_vault_id = var.key_vault_id
 }
