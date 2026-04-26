@@ -9,7 +9,7 @@ resource "azurerm_kubernetes_cluster" "this" {
     node_count      = var.default_node_pool_count
     vm_size         = var.default_node_pool_vm_size
     os_disk_type    = "Ephemeral"
-    os_disk_size_gb = 128
+    os_disk_size_gb = 30
   }
 
   identity {
