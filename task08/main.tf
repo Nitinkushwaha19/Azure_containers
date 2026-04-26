@@ -98,8 +98,8 @@ resource "kubectl_manifest" "secret_provider" {
     aks_kv_access_identity_id  = module.aks.kv_identity_client_id
     kv_name                    = module.keyvault.key_vault_name
     tenant_id                  = data.azurerm_client_config.current.tenant_id
-    redis_url_secret_name      = "${local.redis_name}-secret"
-    redis_password_secret_name = "${local.redis_name}-secret"
+    redis_url_secret_name      = "${local.redis_name}-secret-redis-host"
+    redis_password_secret_name = "${local.redis_name}-secret-redis-pwd"
   })
 
   depends_on = [module.aks, module.redis]
