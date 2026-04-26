@@ -3,6 +3,7 @@ data "azurerm_client_config" "current" {}
 resource "azurerm_resource_group" "RG" {
   name     = local.rg_name
   location = var.rg_location
+  tags     = var.tags
 }
 
 # ACR Module
