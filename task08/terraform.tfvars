@@ -5,7 +5,7 @@ name_prefix = "cmtr-2ehw6cyk-mod8"
 rg_location = "eastus"
 
 # Azure Container Registry (ACR) Module Variables
-container_registry_sku = "Standard"
+container_registry_sku = "Basic"
 
 repo_url = "https://github.com/Nitinkushwaha19/Azure_containers.git"
 

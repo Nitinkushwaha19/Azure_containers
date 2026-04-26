@@ -46,7 +46,7 @@ module "redis" {
   redis_cache_family   = var.redis_cache_family
   redis_cache_sku_name = var.redis_cache_sku_name
 
-  key_vault_secret = "${local.redis_name}-secret"
+  key_vault_secret = "redis"
   key_vault_id     = module.keyvault.key_vault_id
 
   tags = var.tags
@@ -98,8 +98,8 @@ resource "kubectl_manifest" "secret_provider" {
     aks_kv_access_identity_id  = module.aks.kv_identity_client_id
     kv_name                    = module.keyvault.key_vault_name
     tenant_id                  = data.azurerm_client_config.current.tenant_id
-    redis_url_secret_name      = "${local.redis_name}-secret-redis-host"
-    redis_password_secret_name = "${local.redis_name}-secret-redis-pwd"
+    redis_url_secret_name      = "redis-hostname"
+    redis_password_secret_name = "redis-primary-key"
   })
 
   depends_on = [module.aks, module.redis]

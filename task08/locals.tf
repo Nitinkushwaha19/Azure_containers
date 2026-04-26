@@ -9,7 +9,7 @@ locals {
   image_name    = "${var.name_prefix}-app"
 
   # ACI Module locals
-  container_group_name     = "${var.name_prefix}-cg"
+  container_group_name     = local.aci_name
   container_dns_name_label = "${var.name_prefix}-dns"
 
   # containers_config defined here because it references module outputs (cannot be in tfvars)
