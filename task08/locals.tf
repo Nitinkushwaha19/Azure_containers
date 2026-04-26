@@ -19,7 +19,7 @@ locals {
       image  = "${module.ACR.container_registry.login_server}/${local.image_name}:latest"
       cpu    = 0.5
       memory = 1.0
-      port   = 80
+      port   = 8080
       environment_variables = {
         "CREATOR"        = "ACI"
         "REDIS_PORT"     = "6380"
